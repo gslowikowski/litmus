@@ -1,5 +1,6 @@
 lib
 dist
+target
 
 /samples/logs/
 /samples/modules/
