@@ -23,7 +23,7 @@ public enum BuiltInValidation {
 
 
 	EMAIL("email"),
-	// EQUALS("equals"),
+	EQUALS("equals"),
 	IN_FUTURE("future"),
 	AFTER("after"),
 	IN_PAST("past"),
@@ -36,11 +36,10 @@ public enum BuiltInValidation {
 	MAX_SIZE("maxSize"),
 	MIN("min"),
 	MIN_SIZE("minSize"),
-	// PASSWORD --> what is this used for? Not for validation, I guess..?
 	PHONE("phone"),
 	RANGE("range"),
 	REQUIRED("required"),
-	// UNIQUE("unique"),
+	UNIQUE("unique"),
 	URL("url"),
 	VALID("object");
 

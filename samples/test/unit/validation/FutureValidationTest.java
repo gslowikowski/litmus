@@ -7,6 +7,7 @@ import org.junit.Test;
 import static litmus.util.DateUtil.*;
 
 public class FutureValidationTest extends ValidationTest<FutureModel> {
+
 	@Override
 	protected FutureModel valid() {
 		FutureModel model = new FutureModel();
@@ -17,14 +18,14 @@ public class FutureValidationTest extends ValidationTest<FutureModel> {
 
 	@Test
 	public void futureDate() {
-		assertThat("futureDate").shouldNotBe(yesterday());
-		assertThat("futureDate").shouldBeInFuture();
+		assertThat("futureDate").isInvalidWhenEqualTo(yesterday());
+		assertThat("futureDate").mustBeInTheFuture();
 	}
 
 	@Test
 	public void dateAfterAGivenDate() {
-		assertThat("dateAfter1Jan2100").shouldBeAfter(asDate("2100-01-01"));
-		assertThat("dateAfter1Jan2100").shouldBeAfter("2100-01-01");
+		assertThat("dateAfter1Jan2100").mustBeAfter(asDate("2100-01-01"));
+		assertThat("dateAfter1Jan2100").mustBeAfter("2100-01-01");
 	}
 
 }
